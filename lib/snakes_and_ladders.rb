@@ -25,14 +25,14 @@ class SnakesAndLadders
   end
 
   def check_for_winner
-    if @token["position"] == 100
+    if @token["position"] >= 100
       @win_status = true
     end
   end
 
   def display_winner_message
     if @win_status == true
-      "Congratulations, you won!"
+      puts "Congratulations, you won!"
     end
   end
 end

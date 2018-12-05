@@ -71,10 +71,12 @@ describe SnakesAndLadders do
   end
 
   describe "#display_winner_message" do
-    it "returns string if game is won" do
+
+    before(:each) do
       game.token["position"] = 100
       game.check_for_winner
-      expect(game.display_winner_message).to eq("Congratulations, you won!")
     end
+    
+    specify { expect { game.display_winner_message }.to output("Congratulations, you won!\n").to_stdout }
   end
 end
