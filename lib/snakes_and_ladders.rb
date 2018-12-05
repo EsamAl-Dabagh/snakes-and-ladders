@@ -8,6 +8,7 @@ class SnakesAndLadders
   end
 
   def start
+    @win_status = false
     @token["position"] = 1
   end
 
