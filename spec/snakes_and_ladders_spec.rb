@@ -16,4 +16,23 @@ describe SnakesAndLadders do
       expect(game.token["position"]).to eq(1)
     end
   end
+
+  context "when the token is on square 1" do
+    describe "then it's moved 3 spaces" do
+      it "will be on sqaure 4" do
+        game.start
+        expect(game.move(3)).to eq(4)
+        expect(game.token["position"]).to eq(4)
+      end
+
+      describe "then it's moved another 4 spaces" do
+        it "will be on square 8" do
+          game.start
+          game.move(3)
+          expect(game.move(4)).to eq(8)
+          expect(game.token["position"]).to eq(8)
+        end
+      end
+    end
+  end
 end

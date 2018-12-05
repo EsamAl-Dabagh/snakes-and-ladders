@@ -9,4 +9,9 @@ class SnakesAndLadders
   def start
     @token["position"] = 1
   end
+
+  def move(number)
+    new_position = @token["position"] + number
+    @token["position"] = new_position
+  end
 end
