@@ -69,4 +69,12 @@ describe SnakesAndLadders do
       end
     end
   end
+
+  describe "#display_winner_message" do
+    it "returns string if game is won" do
+      game.token["position"] = 100
+      game.check_for_winner
+      expect(game.display_winner_message).to eq("Congratulations, you won!")
+    end
+  end
 end
