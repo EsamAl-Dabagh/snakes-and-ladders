@@ -16,7 +16,7 @@ Given more time I would like to have done two things:
     * `@token["position"]` should not be able to go above 100. I need to put checks in place that will prevent this and also keep a player on their current square if a roll will take them passed square 100. 
     * `#move` should not accept a number greater than 6. 
 
- have extracted functionality out into separate classes/modules, namely: 
+2. Extracted functionality out into separate classes/modules, namely: 
 * `#roll_die` would call `#roll` from a `Die` module
 * `@token` would be extracted to its own class - this will become more important when a second player is introduced. 
 
